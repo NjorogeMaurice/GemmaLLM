@@ -4,7 +4,7 @@ import google.generativeai as genai
 
 def generateResponse(text):
 
-    genai.configure(api_key='')
+    genai.configure(api_key=os.environ['API_KEY'])
     
     model = genai.GenerativeModel(
     model_name="gemini-1.5-flash"
